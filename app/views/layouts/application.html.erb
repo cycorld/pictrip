@@ -12,8 +12,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">PicTrip</h3>
+          <nav>
+            <ul class="nav masthead-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="/users/sign_in">Sign in</a></li>
+              <li><a href="/users/sign_up">Sign up</a></li>
+              <li><a href="/users/sign_out" data-method="delete">Log out</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <%= yield %>
 
-<%= yield %>
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Likelion <a href="http://toycode.net">Toycode</a>, by <a href="http://likelion.net">Likelion</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+</div>
 </body>
 </html>
