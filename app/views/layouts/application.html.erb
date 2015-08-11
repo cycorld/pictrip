@@ -21,9 +21,12 @@
           <nav>
             <ul class="nav masthead-nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="/users/sign_in">Sign in</a></li>
-              <li><a href="/users/sign_up">Sign up</a></li>
-              <li><a href="/users/sign_out" data-method="delete">Log out</a></li>
+              <% if user_signed_in? %>
+                <li><a href="/users/sign_out" data-method="delete">Log out</a></li>
+              <% else %>
+                <li><a href="/users/sign_in">Sign in</a></li>
+                <li><a href="/users/sign_up">Sign up</a></li>
+              <% end %>
             </ul>
           </nav>
         </div>
