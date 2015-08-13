@@ -3,4 +3,8 @@ class DestinationsController < ApplicationController
     
     def index
     end
+    
+    def new
+        @dest = Destination.new
+    end
 end
