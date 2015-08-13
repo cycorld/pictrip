@@ -1,6 +1,7 @@
 class CreateDestinations < ActiveRecord::Migration
   def change
     create_table :destinations do |t|
+      t.belongs_to :user
       t.string :title
       t.string :lat
       t.string :lng
