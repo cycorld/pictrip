@@ -41,18 +41,35 @@ body {
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
+  position: relative;
   display: table;
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  background: url(http://flyiteasy.com/wp-content/uploads/2015/01/Travel-940x270.jpeg);
-  background-size: cover;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(http://flyiteasy.com/wp-content/uploads/2015/01/Travel-940x270.jpeg);
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
 }
 .site-wrapper-inner {
+  position: relative;
   display: table-cell;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   vertical-align: top;
+  z-index: 10;
 }
 .cover-container {
   margin-right: auto;
