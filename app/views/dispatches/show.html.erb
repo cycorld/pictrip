@@ -12,6 +12,12 @@ Dairy <br>
 <a href="/dispatches?id=<%=@dispatch.destination.id%>">돌아 가기</a>
 
 <%= form_tag '/comment/create' do %>
+<input type="hidden" name="dispatch_id" value="<%=@dispatch.id%>">
 <input type="text" name="content" placeholder="댓글을 입력해주세요"">
 <input type="submit">
 <% end %>
+<ul>
+<% @dispatch.comments.each do |c| %>
+  <li><%=c.dispatch.destination.user.email%> : <%=c.content%></li>
+<% end %>
+</ul>

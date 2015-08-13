@@ -5,11 +5,12 @@ class DispatchesController < ApplicationController
     end
     
     def create
+        date = DateTime.civil(*params[:dispatch].sort.map(&:last).map(&:to_i))
         Dispatch.create(destination_id: params[:destination_id],
                         title: params[:title],
                         diary: params[:diary],
                         emotion: params[:emotion],
-                        when: params[:date],
+                        when: date,
                         lat: params[:lat],
                         lng: params[:lng],
                         picture: params[:picture]
