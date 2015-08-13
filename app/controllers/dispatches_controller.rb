@@ -1,6 +1,6 @@
 class DispatchesController < ApplicationController
     layout 'map'
     def index
-        @dispatches = Dispatch.all
+        @destination = Destination.find(params[:id])
     end
 end

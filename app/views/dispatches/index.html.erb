@@ -1,8 +1,12 @@
+<div class="menu">
+    <h1><%=@destination.title%></h1>
+    <a href="/destinations">돌아가기</a>
+</div>
 <div id="map-canvas"></div>
 <div class="list">
   <h1>여행 일지</h1>
   <ul>
-  <% @dispatches.each do |dispatch| %>
+  <% @destination.dispatches.each do |dispatch| %>
     <li><a href=""><%= dispatch.title %></a></li>
   <% end %>
   </ul>
