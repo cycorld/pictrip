@@ -1,0 +1,8 @@
+<%= form_tag "/destinations/create" do %>
+    여행 지역 <input type="text" name="title"><br>
+    공개 설정
+    <input type="radio" name="is_public" value="true">공개
+    <input type="radio" name="is_public" value="false">비공개
+    <br>
+    <input type="submit">
+<% end %>
