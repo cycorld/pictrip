@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20150813101530) do
 
   create_table "destinations", force: :cascade do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.string   "lat"
     t.string   "lng"
