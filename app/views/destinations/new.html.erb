@@ -1,13 +1,23 @@
-<div class="menu">
-    <h1>Travellary</h1>
-    <a href="/destinations">돌아가기</a>
+<div class="create-form-wrapper">
+  <%= form_tag "/destinations", class: "create-form" do %>
+    <div class="top">
+      <%= image_tag "img/point.svg" %>
+      <h1 class="title">여행 등록하기</h1>
+    </div>
+    <div class="area">
+      <label>여행 지역</label>
+      <div class="input-wrapper">
+        <input type="text" name="title">
+        ex) 서울, 도쿄, 베이징, 뉴욕
+      </div>
+    </div>
+    <div class="radios">
+      <input type="radio" name="is_public" value="true" id="open" checked>
+      <label for="open">공개</label>
+      <input type="radio" name="is_public" value="false" id="close">
+      <label for="close">비공개</label>
+    </div>
+    <input type="submit" value="등록하기">
+  <% end %>
 </div>
-<br>
-<%= form_tag "/destinations" do %>
-    여행 지역 <input type="text" name="title"><br>
-    공개 설정
-    <input type="radio" name="is_public" value="true">공개
-    <input type="radio" name="is_public" value="false">비공개
-    <br>
-    <input type="submit">
-<% end %>
+>>>>>>> 28aa81a5c1e53007be1f2e44fe3bdf9a9428a6c0
