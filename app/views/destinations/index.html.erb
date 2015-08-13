@@ -1,4 +1,9 @@
 <div id="map-canvas"></div>
+<div class="list">
+  <% @destinations.each do |destination| %>
+    <%= destination.title %>
+  <% end %>
+</div>
 <script type="text/javascript">
   function initialize() {
     var mapOptions = {

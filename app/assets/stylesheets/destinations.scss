@@ -2,4 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#map-canvas { height: 100%; margin: 0; padding: 0;}
+#map-canvas {
+    float: left;
+    height: 100%; margin: 0; padding: 0;
+    width: 80%;
+}
+
+.list {
+    float: left;
+    width: 20%;
+    right: 0;
+}
