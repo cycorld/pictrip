@@ -9,7 +9,7 @@
   <% @destination.dispatches.each do |dispatch| %>
     <li>
         <img src="<%= dispatch.picture.url %>" style="width: 100px; height: 100px;">
-        <a href=""><%= dispatch.title %></a>
+        <a href="/dispatches/<%=dispatch.id%>"><%= dispatch.title %></a>
     </li>
   <% end %>
   </ul>

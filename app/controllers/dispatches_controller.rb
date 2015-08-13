@@ -16,4 +16,8 @@ class DispatchesController < ApplicationController
                         )
         redirect_to :back
     end
+    
+    def show
+        @dispatch = Dispatch.find(params[:id])
+    end
 end

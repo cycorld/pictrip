@@ -1,0 +1,12 @@
+<img src="<%= @dispatch.picture.url %>"> <br> 
+
+
+title : <%= @dispatch.title %> <br>
+emotion : <%= @dispatch.emotion %> <br>
+time : <%= @dispatch.when %> <br> 
+
+Dairy <br>
+<%= @dispatch.diary %>
+<br>
+
+<a href="/dispatches?id=<%=@dispatch.destination.id%>">돌아 가기</a>
