@@ -77,6 +77,9 @@ $(document).ready(function() {
         })
         
         marker.setMap(map);
+        google.maps.event.addListener(marker, 'click', function(e) {
+           location.href = "/dispatches/<%= dispatch.id %>" 
+        });
     <% end %>
   }
   initialize();
