@@ -11,7 +11,8 @@ class DispatchesController < ApplicationController
                         emotion: params[:emotion],
                         when: params[:date],
                         lat: params[:lat],
-                        lng: params[:lng]
+                        lng: params[:lng],
+                        picture: params[:picture]
                         )
         redirect_to :back
     end

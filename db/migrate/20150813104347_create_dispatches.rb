@@ -8,6 +8,7 @@ class CreateDispatches < ActiveRecord::Migration
       t.datetime :when
       t.string :lat
       t.string :lng
+      t.attachment :picture
       
       t.timestamps null: false
     end
