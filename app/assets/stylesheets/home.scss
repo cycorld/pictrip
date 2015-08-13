@@ -184,3 +184,18 @@ body {
     width: 700px;
   }
 }
+
+.cover-heading {
+  margin: 25px 0;
+}
+
+.lead {
+  margin: 25px 0;
+}
+
+.intro-button {
+  transition: all 0.2s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
