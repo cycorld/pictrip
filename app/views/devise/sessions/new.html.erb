@@ -1,14 +1,14 @@
-<h2>Log in</h2>
+<h1 class="sign-in-title">Travellary</h1>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "sign-in-form" }) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.label :email, class: "email" %><br />
+    <%= f.email_field :email, autofocus: true, class: "email-input", placeholder: "이메일 입력..." %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.label :password, class: "password" %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "password-input", placeholder: "비밀번호 입력..." %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -19,7 +19,7 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "로그인", class: "sign-in" %>
   </div>
 <% end %>
 

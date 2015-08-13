@@ -1,0 +1,36 @@
+.sign-in-title, .sign-up-title {
+  color: lightblue;
+  margin: 30px 0px;
+}
+.sign-in-form, .sign-up-form {
+  .email, .password, .password-confirmation {
+    font-size: 18px;
+  }
+  .email-input, .password-input, .password-confirmation-input {
+    width: 280px;
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid #fff;
+    border-radius: 5px;
+    color: black;
+    outline: none;
+    box-sizing: border-box;
+    &::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .sign-in, .sign-up {
+    margin: 20px 0px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 50px;
+    &:hover {
+      background-color: #2B9FC5;
+    }
+  }
+}
+
