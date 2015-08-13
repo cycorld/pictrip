@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150813104347) do
 
   create_table "dispatches", force: :cascade do |t|
     t.integer  "destination_id"
+    t.string   "title"
     t.text     "diary"
     t.string   "emotion"
     t.datetime "when"

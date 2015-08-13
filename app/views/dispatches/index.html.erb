@@ -2,8 +2,8 @@
 <div class="list">
   <h1>여행 일지</h1>
   <ul>
-  <% @destinations.each do |destination| %>
-    <li><a href="/dispatches?id=<%=destination.id%>"><%= destination.title %></a></li>
+  <% @dispatches.each do |dispatch| %>
+    <li><a href=""><%= dispatch.title %></a></li>
   <% end %>
   </ul>
 </div>

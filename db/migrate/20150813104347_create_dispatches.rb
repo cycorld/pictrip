@@ -2,6 +2,7 @@ class CreateDispatches < ActiveRecord::Migration
   def change
     create_table :dispatches do |t|
       t.belongs_to :destination
+      t.string :title
       t.text :diary
       t.string :emotion
       t.datetime :when
