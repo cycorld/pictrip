@@ -3,7 +3,8 @@ class DestinationsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
     
     def index
-        @destinations = Destination.all
+        #@destinations = Destination.all
+        @destinations = Destination.where(is_public: true)
     end
     
     def new
