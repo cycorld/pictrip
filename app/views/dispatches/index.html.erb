@@ -51,8 +51,10 @@
 <script type="text/javascript">
 $(document).ready(function() {
   function initialize() {
+    var path = [];
+    
     var mapOptions = {
-      center: { lat: -34.397, lng: 150.644},
+      center: { lat: <%=@destination.lat%>, lng: <%=@destination.lng%>},
       zoom: 8
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -69,6 +71,11 @@ $(document).ready(function() {
     });
     
     <% @destination.dispatches.each do |dispatch| %>
+        path.push({
+          lat: <%= dispatch.lat %>,
+          lng: <%= dispatch.lng %>
+        })
+        
         var pos = new google.maps.LatLng(<%= dispatch.lat %>, 
                                         <%= dispatch.lng %>);
                                         
@@ -81,7 +88,18 @@ $(document).ready(function() {
            location.href = "/dispatches/<%= dispatch.id %>" 
         });
     <% end %>
+    
+    var polyline = new google.maps.Polyline({
+      path: path,
+      geodesic: true,
+      strokeColor: '#FF0000',
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+    
+    polyline.setMap(map);
   }
+  
   initialize();
 });
 </script>
