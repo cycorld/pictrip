@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20150813122710) do
   create_table "destinations", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "title"
-    t.string   "lat"
-    t.string   "lng"
+    t.string   "lat",        default: "37.4812917"
+    t.string   "lng",        default: "126.9527237"
     t.boolean  "is_public"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "dispatches", force: :cascade do |t|
